@@ -1,6 +1,6 @@
 # ApklisPaymentCheckerMaui
 
-🇨🇺 **Verificador de Pagos para Apklis** - Una aplicación .NET MAUI para verificar el estado de pago de aplicaciones en la tienda cubana [Apklis](https://apklis.cu/).
+**Verificador de Pagos para Apklis** - Una aplicación .NET MAUI para verificar el estado de pago de aplicaciones en la tienda cubana [Apklis](https://apklis.cu/).
 
 [![.NET MAUI](https://img.shields.io/badge/.NET%20MAUI-9.0-blue.svg)](https://dotnet.microsoft.com/en-us/apps/maui)
 [![Android](https://img.shields.io/badge/Android-21%2B-green.svg)](https://developer.android.com/)
