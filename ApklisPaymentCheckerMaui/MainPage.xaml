@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ApklisPaymentCheckerMaui.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Apklis Payment Checker">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,20" Spacing="25">
+
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="120"
+                Source="dotnet_bot.png" />
+
+            <Label
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Verificador de Pagos Apklis" />
+
+            <Label
+                HorizontalTextAlignment="Center"
+                SemanticProperties.HeadingLevel="Level2"
+                Style="{StaticResource SubHeadline}"
+                Text="Introduzca el nombre del paquete de su aplicación para verificar el estado de pago en Apklis" />
+
+            <!--  Input para el nombre del paquete  -->
+            <Frame
+                Padding="10"
+                BackgroundColor="LightGray"
+                CornerRadius="5">
+                <VerticalStackLayout Spacing="10">
+                    <Label FontAttributes="Bold" Text="Nombre del Paquete:" />
+                    <Entry
+                        x:Name="PackageNameEntry"
+                        BackgroundColor="White"
+                        FontSize="14"
+                        Placeholder="com.yourcompany.appname"
+                        Text="com.yourcompany.appname" />
+                    <Label
+                        FontSize="12"
+                        Text="Ejemplo: com.yourcompany.appname"
+                        TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--  Botón para verificar  -->
+            <Button
+                x:Name="CheckPaymentBtn"
+                BackgroundColor="#2196F3"
+                Clicked="OnCheckPaymentClicked"
+                FontAttributes="Bold"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Verifica el estado de pago en Apklis"
+                Text="Verificar Pago"
+                TextColor="White" />
+
+            <!--  Área de resultados  -->
+            <Frame
+                x:Name="ResultFrame"
+                Padding="15"
+                BackgroundColor="LightBlue"
+                CornerRadius="10"
+                IsVisible="False">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Text="Resultado de la Verificación:" />
+
+                    <Label
+                        x:Name="PaymentStatusLabel"
+                        FontAttributes="Bold"
+                        FontSize="14" />
+
+                    <Label x:Name="UserNameLabel" FontSize="14" />
+
+                    <Label
+                        x:Name="PackageCheckedLabel"
+                        FontSize="12"
+                        TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--  Información adicional  -->
+            <Frame
+                Padding="15"
+                BackgroundColor="LightYellow"
+                CornerRadius="5">
+                <VerticalStackLayout Spacing="5">
+                    <Label FontAttributes="Bold" Text="ℹ️ Información:" />
+                    <Label FontSize="12" Text="• Este ejemplo verifica si una aplicación ha sido pagada en Apklis" />
+                    <Label FontSize="12" Text="• Requiere que la aplicación esté instalada desde Apklis" />
+                    <Label FontSize="12" Text="• Solo funciona en dispositivos Android con Apklis instalado" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
